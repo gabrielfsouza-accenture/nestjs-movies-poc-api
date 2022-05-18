@@ -30,7 +30,6 @@ export class GenreService {
   update(id: string, updateGenreDto: UpdateGenreDto): void {
     const genreFound = this.genreRepository.findById(id);
 
-    console.log('genre found: ', genreFound);
     if (!genreFound)
       throw new BadRequestException('This genre does not exists');
 

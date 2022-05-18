@@ -6,5 +6,6 @@ import GenreRepository from './genre.repository';
 @Module({
   controllers: [GenreController],
   providers: [GenreService, GenreRepository],
+  exports: [GenreService],
 })
 export class GenreModule {}
