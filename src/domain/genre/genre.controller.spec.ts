@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { genreServiceMockFactory, MockType } from '../../test/test-helper';
+import { genreServiceMockFactory, MockType } from '../../../test/test-helper';
 import { Genre } from './entities/genre.entity';
 import { GenreController } from './genre.controller';
 import { GenreService } from './genre.service';

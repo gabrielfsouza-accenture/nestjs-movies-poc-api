@@ -1,5 +1,5 @@
-import GenreRepository from 'src/genre/genre.repository';
-import { GenreService } from 'src/genre/genre.service';
+import GenreRepository from 'src/domain/genre/genre.repository';
+import { GenreService } from 'src/domain/genre/genre.service';
 
 export type MockType<T> = {
   // eslint-disable-next-line @typescript-eslint/ban-types
