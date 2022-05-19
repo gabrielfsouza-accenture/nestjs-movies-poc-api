@@ -1,3 +1,4 @@
+import { BadRequestException } from '@nestjs/common';
 import { Genre } from 'src/domain/genre/entities/genre.entity';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -21,7 +22,7 @@ export class Movie {
   }
 
   private validate() {
-    if (!this.name) throw new Error('Name is required');
-    if (!this.genre) throw new Error('Genre is required');
+    if (!this.name) throw new BadRequestException('Name is required');
+    if (!this.genre) throw new BadRequestException('Genre is required');
   }
 }

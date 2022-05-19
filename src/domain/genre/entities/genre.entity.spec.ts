@@ -1,12 +1,13 @@
+import { BadRequestException } from '@nestjs/common';
 import { Genre } from './genre.entity';
 
 describe('Category Unit Tests', () => {
-  it('should thow an error when name is not provided', () => {
+  it('should trhow an error when name is not provided', () => {
     expect(() => {
       new Genre({
         name: '',
       });
-    }).toThrowError('Name is required');
+    }).toThrowError(new BadRequestException('Name is required'));
   });
 
   it('should create a genre', () => {

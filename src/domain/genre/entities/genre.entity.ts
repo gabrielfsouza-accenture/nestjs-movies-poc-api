@@ -1,3 +1,4 @@
+import { BadRequestException } from '@nestjs/common';
 import { v4 as uuidv4 } from 'uuid';
 
 interface GenreProps {
@@ -17,6 +18,6 @@ export class Genre {
   }
 
   private validate() {
-    if (!this.name) throw new Error('Name is required');
+    if (!this.name) throw new BadRequestException('Name is required');
   }
 }
